@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const ContainerLayout = styled.div`
-  width: 100%;
+export const ContainerLayout = styled.nav`
+  width: 90rem;
   height: 100vh;
 
   background: #fafafa;
@@ -9,5 +9,5 @@ export const ContainerLayout = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin: 0 10rem;
+  margin: 0 auto;
 `

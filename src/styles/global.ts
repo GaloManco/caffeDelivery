@@ -9,9 +9,16 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    background: #fafafa;
+    background: ${(props) => props.theme.background};
+   
+    -webkit-font-smoothing: antialiased;
+
   
 }
-
+input, button, body {
+  font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
 
 `

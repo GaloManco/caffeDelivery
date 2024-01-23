@@ -1,3 +1,3 @@
-export function EntregaDoPedito() {
+export function EntregaDoPedido() {
   return <div>Entrega do pedido</div>
 }
