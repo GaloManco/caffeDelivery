@@ -55,9 +55,27 @@ export const StyleHeader = styled.div`
     background: ${(props) => props.theme.yellow_light};
     width: 2.37rem;
     height: 2.37rem;
+    padding-top: 0.187rem;
 
     svg {
       color: ${(props) => props.theme.yellow_dark};
     }
   }
+`
+
+export const StyleContador = styled.div`
+  display: flex;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  border-radius: 50%;
+  background: ${(props) => props.theme.yellow_dark};
+
+  font-weight: lighter;
+  color: ${(props) => props.theme.white};
+
+  padding-top: 0.1rem;
+  margin-bottom: 2rem;
+  margin-left: -1.5rem;
 `

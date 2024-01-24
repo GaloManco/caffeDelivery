@@ -1,4 +1,4 @@
-import { StyleHeader } from './style'
+import { StyleContador, StyleHeader } from './style'
 import Logo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
@@ -17,9 +17,10 @@ export function Header() {
         </span>
         <strong>
           <NavLink to="/cadastrodopedido" title="Cadastro de pedito">
-            <ShoppingCart size={18} weight="fill" />
+            <ShoppingCart size={16} weight="fill" />
           </NavLink>
         </strong>
+        <StyleContador>3</StyleContador>
       </div>
     </StyleHeader>
   )
