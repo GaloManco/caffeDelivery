@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const StyleHeader = styled.div`
+  /* border: 1px solid; */
+
   width: 100%;
   height: 6.5rem;
   display: flex;
@@ -9,7 +11,6 @@ export const StyleHeader = styled.div`
 
   padding: 0 10rem;
 
-  border: 1px solid;
   div {
     display: flex;
     align-items: center;

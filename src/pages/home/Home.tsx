@@ -1,8 +1,13 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import imagemCafe from '../../assets/ImagemCafe.svg'
 import {
+  StyleCoffee,
+  StyleConteinerBolinhas,
   StyleImgInfor,
   StyleItens,
+  StylePackage,
+  StyleShoppingCart,
+  StyleTimer,
   StyledContainerItem,
   StyledConteinerInfor,
   StyledInfor,
@@ -19,21 +24,34 @@ export function Home() {
           </p>
         </StyledInfor>
         <StyleItens>
-          <strong>
+          <StyleConteinerBolinhas>
             <p>
-              <ShoppingCart weight="fill" />
+              <StyleShoppingCart>
+                <ShoppingCart size={13} weight="fill" />
+              </StyleShoppingCart>
               Compra simples e segura
-              <Timer weight="fill" />
+            </p>
+            <p>
+              <StyleTimer>
+                <Timer size={13} weight="fill" />
+              </StyleTimer>
               Entrega rápida e rastreada
             </p>
-          </strong>
-          <span>
+          </StyleConteinerBolinhas>
+          <StyleConteinerBolinhas>
             <p>
-              <Package weight="fill" />
+              <StylePackage>
+                <Package size={13} weight="fill" />
+              </StylePackage>
               Embalagem mantém o café intacto
-              <Coffee weight="fill" />O café chega fresquinho até você
             </p>
-          </span>
+            <p>
+              <StyleCoffee>
+                <Coffee size={13} weight="fill" />
+              </StyleCoffee>
+              O café chega fresquinho até você
+            </p>
+          </StyleConteinerBolinhas>
         </StyleItens>
       </StyledContainerItem>
       <StyleImgInfor>
