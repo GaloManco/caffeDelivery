@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+export const StyleContainer = styled.div`
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90rem;
+`
+
 export const StyledConteinerInfor = styled.div`
   /* border: 1px solid; */
 
@@ -7,12 +16,14 @@ export const StyledConteinerInfor = styled.div`
   justify-content: center;
 
   width: 100%;
-  height: 34rem;
+  height: 28rem;
 
-  margin-top: 3rem;
+  margin-top: 5.87rem;
 `
 
 export const StyledContainerItem = styled.div`
+  /* border: 1px solid red; */
+
   display: flex;
   flex-direction: column;
 
@@ -61,6 +72,8 @@ export const StyleImgInfor = styled.div`
 `
 
 export const StyleConteinerBolinhas = styled.div`
+  /* border: 1px solid red; */
+
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -83,6 +96,8 @@ const StyleBaseBolinha = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 0.1rem;
+  padding-top: 0.1rem;
   svg {
     color: ${(props) => props.theme.background};
   }
@@ -98,4 +113,24 @@ export const StylePackage = styled(StyleBaseBolinha)`
 `
 export const StyleCoffee = styled(StyleBaseBolinha)`
   background: ${(props) => props.theme.purple};
+`
+export const StyleConteinerList = styled.div`
+  /* border: 1px solid red; */
+
+  width: 70rem;
+  height: calc(auto);
+
+  display: flex;
+
+  margin-top: 1rem;
+
+  flex-direction: column;
+  gap: 3.37rem;
+
+  & > div:first-child {
+    width: 100%;
+    font-family: 'Baloo 2';
+    color: ${(props) => props.theme.base_subtitle};
+    font-size: 2rem;
+  }
 `
