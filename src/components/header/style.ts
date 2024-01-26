@@ -47,7 +47,7 @@ export const StyleHeader = styled.div`
       color: ${(props) => props.theme.purple};
     }
   }
-  strong {
+  /* strong {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +61,7 @@ export const StyleHeader = styled.div`
     svg {
       color: ${(props) => props.theme.yellow_dark};
     }
-  }
+  } */
 `
 
 export const StyleContador = styled.div`
