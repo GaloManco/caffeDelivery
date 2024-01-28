@@ -3,7 +3,12 @@ import styled from 'styled-components'
 export const StyleHeader = styled.div`
   /* border: 1px solid; */
 
-  width: 100%;
+  position: fixed;
+  transition: top 0.3s;
+  z-index: 1000;
+  background: ${(props) => props.theme.background};
+
+  width: 90rem;
   height: 6.5rem;
   display: flex;
   align-items: center;
@@ -47,21 +52,6 @@ export const StyleHeader = styled.div`
       color: ${(props) => props.theme.purple};
     }
   }
-  /* strong {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-
-    background: ${(props) => props.theme.yellow_light};
-    width: 2.37rem;
-    height: 2.37rem;
-    padding-top: 0.187rem;
-
-    svg {
-      color: ${(props) => props.theme.yellow_dark};
-    }
-  } */
 `
 
 export const StyleContador = styled.div`

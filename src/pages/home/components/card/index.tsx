@@ -10,14 +10,28 @@ export function Card() {
       <StyleInforCard>
         <h2>
           <ul>
-            <li>TRADICIONAL</li>
-            <li>QUENTE</li>
-            <li>COM LEITE</li>
-            {/* <li>ESPECIAL</li> */}
-            {/* <li>ALCOÓLICO</li> */}
-            {/* <li>GELADO</li> */}
+            <li>
+              <p>TRADICIONAL</p>
+            </li>
+            <li>
+              <p>QUENTE</p>
+            </li>
+
+            <li>
+              <p>COM LEITE</p>
+            </li>
+            {/* <li>
+              <p>ESPECIAL</p>
+            </li> */}
+            {/* <li>
+              <p>ALCOÓLICO</p>
+            </li> */}
+            {/* <li>
+              <p>GELEADO</p>
+            </li> */}
           </ul>
         </h2>
+
         <StyleInforCafe>
           <h1>Expresso Tradicional</h1>
           <p>O tradicional café feito com água quente e grãos moídos</p>
@@ -36,8 +50,9 @@ export function Card() {
               <button>
                 <StyleShoppeCard
                   corDofundo={'purpleDark'}
-                  corDoIcons={'baseCard'}
+                  corDoIcons={'base_card'}
                   corDeFundoHover={'purple'}
+                  corDeIconsHover={'base_card'}
                 >
                   <ShoppingCart weight="fill" size={14} />
                 </StyleShoppeCard>

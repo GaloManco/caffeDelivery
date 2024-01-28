@@ -16,7 +16,12 @@ export function Header() {
           <MapPin size={17} weight="fill" />
           <p>Porto Alegre,RS</p>
         </span>
-        <StyleShoppeCard corDoIcons={'yellowDark'} corDofundo={'yellow_light'}>
+        <StyleShoppeCard
+          corDoIcons={'yellowDark'}
+          corDofundo={'yellow_light'}
+          corDeFundoHover={'yellow'}
+          corDeIconsHover={'base_card'}
+        >
           <NavLink to="/cadastrodopedido" title="Cadastro de pedito">
             <ShoppingCart size={16} weight="fill" />
           </NavLink>

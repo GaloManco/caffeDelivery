@@ -18,7 +18,7 @@ export const StyledConteinerInfor = styled.div`
   width: 100%;
   height: 28rem;
 
-  margin-top: 5.87rem;
+  margin-top: 6.87rem;
 `
 
 export const StyledContainerItem = styled.div`
@@ -123,6 +123,7 @@ export const StyleConteinerList = styled.div`
   display: flex;
 
   margin-top: 1rem;
+  margin-bottom: 8rem;
 
   flex-direction: column;
   gap: 3.37rem;

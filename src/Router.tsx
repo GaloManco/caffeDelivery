@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { DefaultLayout } from './layout/defaultLayout'
 import { Home } from './pages/home/Home'
 import { EntregaDoPedido } from './pages/entragaDopedido/EntregaDopedido'
-import { CadastroDoPedido } from './pages/cadastroDopedido/CadastroDopedido'
+import { CadastroDoPedido } from './pages/cadastroDopedido'
 
 export function Router() {
   return (

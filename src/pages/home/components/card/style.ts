@@ -22,23 +22,29 @@ export const StyleCard = styled.div`
 `
 
 export const StyleInforCard = styled.div`
+  /* border: 1px solid blue; */
   width: 13.5rem;
   height: 11.13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  ul {
-    display: flex;
-    justify-content: center;
-    gap: 0.25rem;
-    li {
-      background: ${(props) => props.theme.yellow_light};
-      border-radius: 100px;
-      color: ${(props) => props.theme.yellow_dark};
-      font-size: 0.7rem;
-      padding: 0.4rem;
-      margin-top: 0.75rem;
+  & > h2:first-child {
+    ul {
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: center;
+
+      gap: 0.25rem;
+
+      li {
+        background: ${(props) => props.theme.yellow_light};
+        color: ${(props) => props.theme.yellow_dark};
+        border-radius: 100px;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin-top: 0.75rem;
+      }
     }
   }
 `
@@ -54,6 +60,7 @@ export const StyleInforCafe = styled.div`
     font-family: 'Baloo 2';
     font-size: 1.25rem;
     color: ${(props) => props.theme.base_subtitle};
+    display: flex;
   }
   & > p {
     text-align: center;
