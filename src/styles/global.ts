@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
     background: ${(props) => props.theme.base_card};
    
+   
     -webkit-font-smoothing: antialiased;
 
   
