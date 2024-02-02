@@ -5,11 +5,12 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react'
+import { StyleCompletarPedido } from './style'
 
 export function CompletarPedido() {
   return (
     <>
-      <section>
+      <StyleCompletarPedido>
         <h2>Complete seu pedido</h2>
         <div>
           <header>
@@ -55,7 +56,7 @@ export function CompletarPedido() {
             </ul>
           </section>
         </footer>
-      </section>
+      </StyleCompletarPedido>
     </>
   )
 }

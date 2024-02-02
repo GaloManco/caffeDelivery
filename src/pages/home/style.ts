@@ -7,6 +7,7 @@ export const StyleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 90rem;
+  height: 143.31rem;
 `
 
 export const StyledConteinerInfor = styled.div`
