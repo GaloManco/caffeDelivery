@@ -8,6 +8,7 @@ import {
 import {
   StyleCompletarPedido,
   StyleCotainerCompletarPedito,
+  StyleFooterCompletarPedido,
   StyleFormularioCompletarPedido,
   StyleHeaderCompletarPedido,
   StyleHeaderCompletarPedido2,
@@ -49,30 +50,36 @@ export function CompletarPedido() {
             </div>
           </StyleFormularioCompletarPedido>
         </div>
-        <footer>
-          <StyleHeaderCompletarPedido2>
-            <h2>
-              <CurrencyDollar /> Pagamento
-            </h2>
-            <p>
-              O pagamento é feito na entrega. Escolha a forma que deseja pagar
-            </p>
-          </StyleHeaderCompletarPedido2>
-          <section>
-            <ul>
-              <li>
-                <CreditCard /> CARTÃO DE CRÉDITO
-              </li>
-              <li>
-                <Bank /> CARTÃO DE DÉBITO
-              </li>
-              <li>
-                <Money /> DINHEIRO
-              </li>
-            </ul>
-          </section>
-        </footer>
       </StyleCompletarPedido>
+      <StyleFooterCompletarPedido>
+        <StyleHeaderCompletarPedido2>
+          <h2>
+            <CurrencyDollar size={22} weight="fill" /> <span>Pagamento</span>
+          </h2>
+          <p>
+            O pagamento é feito na entrega. Escolha a forma que deseja pagar
+          </p>
+        </StyleHeaderCompletarPedido2>
+        <section>
+          <ul>
+            <li>
+              <button>
+                <CreditCard size={22} weight="fill" /> CARTÃO DE CRÉDITO
+              </button>
+            </li>
+            <li>
+              <button>
+                <Bank size={22} weight="fill" /> CARTÃO DE DÉBITO
+              </button>
+            </li>
+            <li>
+              <button>
+                <Money size={22} weight="fill" /> DINHEIRO
+              </button>
+            </li>
+          </ul>
+        </section>
+      </StyleFooterCompletarPedido>
     </StyleCotainerCompletarPedito>
   )
 }

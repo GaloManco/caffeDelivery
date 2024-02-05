@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 export const StyleCotainerCompletarPedito = styled.div`
   & > h2:first-child {
-    font-size: 1.3rem;
+    font-size: 20.8px;
     font-family: 'Baloo 2';
     color: ${(props) => props.theme.base_subtitle};
   }
 `
 export const StyleCompletarPedido = styled.section`
   width: 40rem;
-  height: 36.93rem;
+  height: 23.25rem;
 
   background: ${(props) => props.theme.base_card};
   display: flex;
@@ -50,11 +50,6 @@ export const StyleHeaderCompletarPedido = styled(BaseHeaderCompletarPedido)`
     color: ${(props) => props.theme.yellow_dark};
   }
 `
-export const StyleHeaderCompletarPedido2 = styled(BaseHeaderCompletarPedido)`
-  svg {
-    color: ${(props) => props.theme.purple};
-  }
-`
 export const StyleFormularioCompletarPedido = styled.form`
   display: flex;
   flex-direction: column;
@@ -66,13 +61,13 @@ const BaseImputCompletarPedido = styled.input`
   border-radius: 4px;
   border: none;
   background: ${(props) => props.theme.base_input};
-  padding: 10px;
+  padding: 0.625rem;
 
   &::placeholder {
     color: ${(props) => props.theme.base_label};
     font-family: 'Roboto';
     font-size: 0.9rem;
-    /* padding: 0.75rem; */
+    /* padding: .75rem; */
   }
 
   &:focus {
@@ -108,4 +103,76 @@ export const StyleImputCompletarPedido6 = styled(BaseImputCompletarPedido)`
 `
 export const StyleImputCompletarPedido7 = styled(BaseImputCompletarPedido)`
   width: 3.75rem;
+`
+// --------------------footer da página------------------------------------------
+export const StyleFooterCompletarPedido = styled.div`
+  width: 40rem;
+  height: 12.9rem;
+  border-radius: 6px;
+  background: ${(props) => props.theme.base_card};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-top: 0.75rem;
+
+  section {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 0.75rem;
+
+      li {
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 11.1875rem;
+          height: 3.1875rem;
+          background: ${(props) => props.theme.base_button};
+          border-radius: 6px;
+
+          font-size: 0.75rem;
+          font-family: 'Roboto';
+          font-weight: lighter;
+          letter-spacing: 0.0625rem;
+
+          color: ${(props) => props.theme.base_text};
+          cursor: pointer;
+          border: none;
+
+          &:hover {
+            background: ${(props) => props.theme.purple_light};
+          }
+        }
+
+        svg {
+          color: ${(props) => props.theme.purple};
+          margin-right: 0.75rem;
+        }
+      }
+    }
+  }
+`
+export const StyleHeaderCompletarPedido2 = styled(BaseHeaderCompletarPedido)`
+  /* border: 1px solid red; */
+  width: 560px;
+  height: 44px;
+
+  & > h2 {
+    & > span {
+      font-size: 1.2rem;
+      font-family: 'Roboto';
+      color: ${(props) => props.theme.base_subtitle};
+      font-weight: lighter;
+      margin-left: 0.5rem;
+    }
+  }
+
+  svg {
+    color: ${(props) => props.theme.purple};
+  }
 `
