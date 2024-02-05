@@ -1,8 +1,9 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
+import { StyleConfirmaPedido } from './style'
 
 export function ConfirmaPedido() {
   return (
-    <section>
+    <StyleConfirmaPedido>
       <div>
         <ul>
           <li>
@@ -41,6 +42,6 @@ export function ConfirmaPedido() {
           <p>R$ 33,20</p>
         </div>
       </div>
-    </section>
+    </StyleConfirmaPedido>
   )
 }

@@ -5,43 +5,59 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react'
-import { StyleCompletarPedido } from './style'
+import {
+  StyleCompletarPedido,
+  StyleCotainerCompletarPedito,
+  StyleFormularioCompletarPedido,
+  StyleHeaderCompletarPedido,
+  StyleHeaderCompletarPedido2,
+  StyleImputCompletarPedido1,
+  StyleImputCompletarPedido2,
+  StyleImputCompletarPedido3,
+  StyleImputCompletarPedido4,
+  StyleImputCompletarPedido5,
+  StyleImputCompletarPedido6,
+  StyleImputCompletarPedido7,
+} from './style'
 
 export function CompletarPedido() {
   return (
-    <>
+    <StyleCotainerCompletarPedito>
+      <h2>Complete seu pedido</h2>
       <StyleCompletarPedido>
-        <h2>Complete seu pedido</h2>
         <div>
-          <header>
+          <StyleHeaderCompletarPedido>
             <h2>
-              <MapPinLine /> Endereço de Entrega
+              <MapPinLine size={23} /> <p>Endereço de Entrega</p>
             </h2>
             <p>Informe o endereço onde deseja receber seu pedido</p>
-          </header>
-          <form action="">
-            <input type="text" placeholder="CEP" />
-            <input type="text" placeholder="Rua" />
+          </StyleHeaderCompletarPedido>
+          <StyleFormularioCompletarPedido action="">
+            <StyleImputCompletarPedido1 type="text" placeholder="CEP" />
+            <StyleImputCompletarPedido2 type="text" placeholder="Rua" />
             <div>
-              <input type="text" placeholder="numero" />
-              <input type="text" placeholder="Complemento" />
+              <StyleImputCompletarPedido3 type="text" placeholder="Número" />
+              <StyleImputCompletarPedido4
+                type="text"
+                placeholder="Complemento"
+              />
             </div>
             <div>
-              <input type="text" placeholder="Número" />
-              <input type="text" placeholder="Cidade" />
-              <input type="text" placeholder="UF" />
+              <StyleImputCompletarPedido5 type="text" placeholder="Bairro" />
+              <StyleImputCompletarPedido6 type="text" placeholder="Cidade" />
+              <StyleImputCompletarPedido7 type="text" placeholder="UF" />
             </div>
-          </form>
+          </StyleFormularioCompletarPedido>
         </div>
         <footer>
-          <header>
+          <StyleHeaderCompletarPedido2>
             <h2>
               <CurrencyDollar /> Pagamento
             </h2>
             <p>
               O pagamento é feito na entrega. Escolha a forma que deseja pagar
             </p>
-          </header>
+          </StyleHeaderCompletarPedido2>
           <section>
             <ul>
               <li>
@@ -57,6 +73,6 @@ export function CompletarPedido() {
           </section>
         </footer>
       </StyleCompletarPedido>
-    </>
+    </StyleCotainerCompletarPedito>
   )
 }
