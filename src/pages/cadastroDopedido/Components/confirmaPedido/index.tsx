@@ -1,31 +1,43 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
-import { StyleConfirmaPedido } from './style'
+import {
+  StyleConfirmaPedido,
+  StyleListaDeCaffeSelecionados,
+  StyleListaDeProdutosComprados,
+  StyleValorDoProduto,
+} from './style'
+import Coffee01 from '../../../../assets/Coffee01.svg'
 
 export function ConfirmaPedido() {
   return (
     <StyleConfirmaPedido>
       <div>
         <ul>
-          <li>
-            <div>
-              <span>imagem cafe</span>
+          <StyleListaDeProdutosComprados>
+            <StyleListaDeCaffeSelecionados>
+              <img src={Coffee01} />
               <div>
                 <header>Expresso Tradicional</header>
                 <footer>
                   <strong>
-                    <Minus />
-                    1
-                    <Plus />
+                    <button>
+                      <Minus size={14} weight="fill" />
+                    </button>
+                    <p>1</p>
+                    <button>
+                      <Plus size={14} weight="fill" />
+                    </button>
                   </strong>
                   <span>
-                    <Trash />
-                    <p>REMOVER</p>
+                    <button>
+                      <Trash size={16} />
+                      <p>REMOVER</p>
+                    </button>
                   </span>
                 </footer>
               </div>
-              <p>R$ 9,00</p>
-            </div>
-          </li>
+              <StyleValorDoProduto>R$ 9,00</StyleValorDoProduto>
+            </StyleListaDeCaffeSelecionados>
+          </StyleListaDeProdutosComprados>
         </ul>
       </div>
       <div>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerLayout = styled.nav`
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   width: 90rem;
   height: 149.31rem;

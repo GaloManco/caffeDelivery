@@ -38,9 +38,10 @@ export function CompletarPedido() {
             <StyleImputCompletarPedido2 type="text" placeholder="Rua" />
             <div>
               <StyleImputCompletarPedido3 type="text" placeholder="Número" />
+
               <StyleImputCompletarPedido4
                 type="text"
-                placeholder="Complemento"
+                placeholder="Complemento ( opcional )"
               />
             </div>
             <div>

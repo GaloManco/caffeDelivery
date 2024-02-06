@@ -67,7 +67,6 @@ const BaseImputCompletarPedido = styled.input`
     color: ${(props) => props.theme.base_label};
     font-family: 'Roboto';
     font-size: 0.9rem;
-    /* padding: .75rem; */
   }
 
   &:focus {
@@ -86,12 +85,6 @@ export const StyleImputCompletarPedido3 = styled(BaseImputCompletarPedido)`
 `
 export const StyleImputCompletarPedido4 = styled(BaseImputCompletarPedido)`
   width: 21.75rem;
-  &::placeholder::after {
-    content: 'teste';
-    color: ${(props) => props.theme.base_label};
-    font-family: 'Roboto';
-    font-size: 0.8rem;
-  }
 `
 export const StyleImputCompletarPedido5 = styled(BaseImputCompletarPedido)`
   width: 12.5rem;
