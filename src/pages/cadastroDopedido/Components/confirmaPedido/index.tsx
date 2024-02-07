@@ -6,6 +6,7 @@ import {
   StyleValorDoProduto,
 } from './style'
 import Coffee01 from '../../../../assets/Coffee01.svg'
+import { ListaDevalores } from './components/listadevalores'
 
 export function ConfirmaPedido() {
   return (
@@ -40,20 +41,8 @@ export function ConfirmaPedido() {
           </StyleListaDeProdutosComprados>
         </ul>
       </div>
-      <div>
-        <div>
-          <p>Total de itens</p>
-          <p>R$ 20,70</p>
-        </div>
-        <div>
-          <p>Entrega</p>
-          <p>R$ 3,50</p>
-        </div>
-        <div>
-          <p>Total</p>
-          <p>R$ 33,20</p>
-        </div>
-      </div>
+      <ListaDevalores />
+
     </StyleConfirmaPedido>
   )
 }
