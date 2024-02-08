@@ -26,6 +26,7 @@ export const StyleShoppeCard = styled.div<StatusProps>`
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  cursor: pointer;
 
   /* background: ${(props) => props.theme.yellow_light}; */
   background: ${(props) => props.theme[COR_DE_FUNDO[props.corDofundo]]};
@@ -33,9 +34,9 @@ export const StyleShoppeCard = styled.div<StatusProps>`
   &:hover {
     background: ${(props) =>
       props.theme[COR_DE_FUNDO_HOVER[props.corDeFundoHover]]};
-    & svg:hover {
-      color: ${(props) => props.theme[COR_DOS_ICONS[props.corDeIconsHover]]};
-    }
+  }
+  &:hover svg {
+    color: ${(props) => props.theme[COR_DOS_ICONS[props.corDeIconsHover]]};
   }
 
   width: 2.37rem;

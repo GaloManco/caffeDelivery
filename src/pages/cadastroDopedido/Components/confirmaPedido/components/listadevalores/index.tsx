@@ -1,21 +1,25 @@
-import { StyleConteinerListaDeValores } from './styles'
+import {
+  StyleButtonConfirmaPedido,
+  StyleConteinerListaDeValores,
+  StyleConteinerTotalDoValor,
+} from './styles'
 
 export function ListaDevalores() {
   return (
     <StyleConteinerListaDeValores>
       <div>
         <p>Total de itens</p>
-        <p>R$ 20,70</p>
+        <span>R$ 20,70</span>
       </div>
       <div>
         <p>Entrega</p>
-        <p>R$ 3,50</p>
+        <span>R$ 3,50</span>
       </div>
-      <div>
+      <StyleConteinerTotalDoValor>
         <p>Total</p>
-        <p>R$ 33,20</p>
-      </div>
-      <button>Confirma Pedido</button>
+        <span>R$ 33,20</span>
+      </StyleConteinerTotalDoValor>
+      <StyleButtonConfirmaPedido>Confirma Pedido</StyleButtonConfirmaPedido>
     </StyleConteinerListaDeValores>
   )
 }
