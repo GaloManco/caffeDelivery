@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import {
   StyleButtonConfirmaPedido,
   StyleConteinerListaDeValores,
@@ -19,7 +20,9 @@ export function ListaDevalores() {
         <p>Total</p>
         <span>R$ 33,20</span>
       </StyleConteinerTotalDoValor>
-      <StyleButtonConfirmaPedido>Confirma Pedido</StyleButtonConfirmaPedido>
+      <NavLink to="/entregadopedido" title="Confirma Pedido">
+        <StyleButtonConfirmaPedido>Confirmar Pedido</StyleButtonConfirmaPedido>
+      </NavLink>
     </StyleConteinerListaDeValores>
   )
 }
