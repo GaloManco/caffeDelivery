@@ -57,8 +57,8 @@ export const StyleHeader = styled.div`
 export const StyleContador = styled.div`
   display: flex;
 
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.3rem;
+  height: 1.3rem;
 
   border-radius: 50%;
   background: ${(props) => props.theme.yellow_dark};
@@ -68,5 +68,5 @@ export const StyleContador = styled.div`
 
   padding-top: 0.1rem;
   margin-bottom: 2rem;
-  margin-left: -1.5rem;
+  margin-left: -1.3rem;
 `

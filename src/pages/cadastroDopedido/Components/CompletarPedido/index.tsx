@@ -20,8 +20,16 @@ import {
   StyleImputCompletarPedido6,
   StyleImputCompletarPedido7,
 } from './style'
-
-export function CompletarPedido() {
+type addEnderecoType = {
+  cep: string
+  rua: string
+  numero: string
+  complemento: string
+  bairro: string
+  cidade: string
+  uf: string
+}
+export function CompletarPedido({ register }: any) {
   return (
     <StyleCotainerCompletarPedito>
       <h2>Complete seu pedido</h2>
@@ -33,21 +41,46 @@ export function CompletarPedido() {
             </h2>
             <p>Informe o endereço onde deseja receber seu pedido</p>
           </StyleHeaderCompletarPedido>
-          <StyleFormularioCompletarPedido action="">
-            <StyleImputCompletarPedido1 type="text" placeholder="CEP" />
-            <StyleImputCompletarPedido2 type="text" placeholder="Rua" />
+          <StyleFormularioCompletarPedido action="#">
+            <StyleImputCompletarPedido1
+              {...register('cep')}
+              type="text"
+              placeholder="CEP"
+            />
+            <StyleImputCompletarPedido2
+              {...register('rua')}
+              type="text"
+              placeholder="Rua"
+            />
             <div>
-              <StyleImputCompletarPedido3 type="text" placeholder="Número" />
+              <StyleImputCompletarPedido3
+                {...register('numero')}
+                type="text"
+                placeholder="Número"
+              />
 
               <StyleImputCompletarPedido4
+                {...register('complementos')}
                 type="text"
                 placeholder="Complemento ( opcional )"
               />
             </div>
             <div>
-              <StyleImputCompletarPedido5 type="text" placeholder="Bairro" />
-              <StyleImputCompletarPedido6 type="text" placeholder="Cidade" />
-              <StyleImputCompletarPedido7 type="text" placeholder="UF" />
+              <StyleImputCompletarPedido5
+                {...register('bairro')}
+                type="text"
+                placeholder="Bairro"
+              />
+              <StyleImputCompletarPedido6
+                {...register('cidade')}
+                type="text"
+                placeholder="Cidade"
+              />
+              <StyleImputCompletarPedido7
+                {...register('uf')}
+                type="text"
+                placeholder="UF"
+              />
             </div>
           </StyleFormularioCompletarPedido>
         </div>

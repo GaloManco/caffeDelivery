@@ -1,53 +1,96 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
-import caffe01 from '../../../../assets/Coffee01.svg'
+
 import { StyleCard, StyleInforCafe, StyleInforCard } from './style'
 import { StyleShoppeCard } from '../../../../components/header/components/boxIcons/style'
+import { useContext, useState } from 'react'
+import { TipoCafeContext } from '../../../../contexts/contextTipoCafe'
 
-export function Card() {
+interface SaborDoCafeType {
+  sabor01?: string
+  sabor02?: string
+  sabor03?: string
+}
+interface TypeTipoCafeState {
+  id: string
+  nome: string
+  descricao: string
+  preco: number
+  imagem: string
+
+  tipoDeCafer?: SaborDoCafeType[] | undefined
+  // addNoCarrinho: PayloadType
+}
+
+export function Card({
+  id,
+  nome,
+  descricao,
+  imagem,
+  preco,
+  tipoDeCafer,
+}: TypeTipoCafeState) {
+  const [qtdCafe, setQtdCafe] = useState(0)
+  const { state, dispatch } = useContext(TipoCafeContext)
+
+  function handleAddNoCarrinho() {
+    if (qtdCafe > 0) {
+      const dados = {
+        idCafe: id,
+        qtd: qtdCafe,
+        preco: qtdCafe * preco,
+        nome,
+        descricao,
+        imagem,
+      }
+      const carrinhoAtual = state.carrinhoDeCompras
+      const novoCarrinho = [...carrinhoAtual, dados]
+      dispatch({ type: 'CARRINHO_DE_COMPRAS', payload: novoCarrinho })
+      setQtdCafe(0)
+    }
+  }
+
+  function handleDiminuirProduto() {
+    if (qtdCafe > 0) {
+      setQtdCafe(qtdCafe - 1)
+    }
+  }
+
   return (
     <StyleCard>
-      <img src={caffe01} alt="" />
+      <img src={imagem} alt="" />
       <StyleInforCard>
         <h2>
+          {/* ingrediente do cafe */}
           <ul>
-            <li>
-              <p>TRADICIONAL</p>
-            </li>
-            <li>
-              <p>QUENTE</p>
-            </li>
-
-            <li>
-              <p>COM LEITE</p>
-            </li>
-            {/* <li>
-              <p>ESPECIAL</p>
-            </li> */}
-            {/* <li>
-              <p>ALCOÓLICO</p>
-            </li> */}
-            {/* <li>
-              <p>GELEADO</p>
-            </li> */}
+            {tipoDeCafer?.map((sabores) =>
+              Object.values(sabores).map((sabor) => (
+                <li key={sabor}>
+                  <p>{sabor}</p>
+                </li>
+              )),
+            )}
           </ul>
         </h2>
 
         <StyleInforCafe>
-          <h1>Expresso Tradicional</h1>
-          <p>O tradicional café feito com água quente e grãos moídos</p>
+          {/* Nome do cafe */}
+          <h1>{nome}</h1>
+          {/* Descrição do cafe */}
+          <p>{descricao}</p>
           <footer>
-            <h1>R$9,00</h1>
+            {/* Valor do cafe */}
+            <h1>R${preco.toFixed(2).replace('.', ',')}</h1>
             <div>
               <span>
-                <button>
+                <button onClick={handleDiminuirProduto}>
                   <Minus size={14} />
                 </button>
-                1
-                <button>
+                <p>{qtdCafe}</p>
+                <button onClick={() => setQtdCafe(qtdCafe + 1)}>
                   <Plus size={14} />
                 </button>
               </span>
-              <button>
+              <button onClick={handleAddNoCarrinho}>
                 <StyleShoppeCard
                   corDofundo={'purpleDark'}
                   corDoIcons={'base_card'}

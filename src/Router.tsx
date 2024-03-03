@@ -4,6 +4,7 @@ import { Home } from './pages/home/Home'
 import { EntregaDoPedido } from './pages/entragaDopedido'
 import { CadastroDoPedido } from './pages/cadastroDopedido'
 
+
 export function Router() {
   return (
     <Routes>

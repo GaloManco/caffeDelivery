@@ -9,8 +9,11 @@ import {
   StyleHeaderEntregaDopedido,
   StyleImagemMotinhaEntregando,
 } from './style'
-import motinhaEntregando from '../../assets/motinha-entregando.svg'
+import motinhaEntregando from '../../assets/motinhaEntregando.svg'
+import { ContextCompletarPedito } from '../../contexts/contextoCompletarPedido/contextCompletarPedido'
+import { useContext } from 'react'
 export function EntregaDoPedido() {
+  const { endrecoClienteState } = useContext(ContextCompletarPedito)
   return (
     <StyleConteinerPedidoConfirmado>
       <StyleHeaderEntregaDopedido>
@@ -26,9 +29,15 @@ export function EntregaDoPedido() {
               </span>
               <div>
                 <p>
-                  Entrega em<strong>Rua João Daniel Martinelli, 102</strong>
+                  Entrega em
+                  <strong>
+                    {endrecoClienteState?.rua}, {endrecoClienteState?.numero}
+                  </strong>
                 </p>
-                <p>Farrapos - Porto Alegre, RS</p>
+                <p>
+                  {endrecoClienteState?.complemento} -{' '}
+                  {endrecoClienteState?.cidade}, {endrecoClienteState?.uf}
+                </p>
               </div>
             </StyleExibirEndrecoDeEntrega>
             <StyleExibirPrevisãoDeEntrega>
